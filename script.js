@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentLiftIndex = 0;
     let currentSet = 0;
 
+    // Add emoji to the title screen
+    const emojiElement = document.createElement("div");
+    emojiElement.textContent = "🏋️‍♂️"; // Flexed biceps emoji
+    emojiElement.style.fontSize = "2rem";
+    emojiElement.style.textAlign = "center";
+    const titleElement = document.querySelector("#selection-screen h1");
+    titleElement.insertAdjacentElement("afterend", emojiElement);
+
     // Set default selections
     const squatOption = Array.from(liftOptions).find(option => option.value === "Squat");
     if (squatOption) squatOption.checked = true;
