@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Bro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="selection-screen" class="screen">
+            <h1>Lift Bro</h1>
+            <p>Select your lifts for today:</p>
+            <div id="lift-options">
+                <label><input type="checkbox" value="Squat"> Squat</label>
+                <label><input type="checkbox" value="Bench Press"> Bench Press</label>
+                <label><input type="checkbox" value="Overhead Press"> Overhead Press</label>
+                <label><input type="checkbox" value="Chin-Ups"> Chin-Ups</label>
+                <label><input type="checkbox" value="Bar Curls"> Bar Curls</label>
+            </div>
+            <button id="confirm-lifts">Confirm Selection</button>
+        </div>
+
+        <div id="workout-screen" class="screen hidden">
+            <h1 id="lift-name"></h1>
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="set-count"></p>
+            <button id="next-set">Next Set</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
