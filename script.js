@@ -63,16 +63,39 @@ document.addEventListener("DOMContentLoaded", () => {
     function startWorkout() {
         liftName.textContent = selectedLifts[currentLiftIndex];
         currentSet = 0;
+        nextSetButton.textContent = "Next Set"; // Reset button text
         updateProgress();
     }
 
     function updateProgress() {
         progressBar.style.width = `${(currentSet / 5) * 100}%`;
         setCount.textContent = `Set ${currentSet} of 5`;
+
+        if (currentSet === 5) {
+            nextSetButton.textContent = "Next Lift";
+        }
     }
 
-    // Adjust font size for better visibility
+    // Adjust font size and center content for mobile optimization
     document.querySelectorAll("label, button, h1, p").forEach(element => {
         element.style.fontSize = "larger";
+        element.style.textAlign = "center";
     });
+
+    document.getElementById("app").style.cssText = `
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    `;
+
+    document.body.style.margin = "0";
+    document.body.style.display = "flex";
+    document.body.style.justifyContent = "center";
+    document.body.style.alignItems = "center";
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
 });
