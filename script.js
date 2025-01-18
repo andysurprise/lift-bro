@@ -66,7 +66,7 @@ function showWorkoutScreen() {
             <p id="set-count">Set ${currentSet + 1} of 5</p>
             <button onclick="nextSet()">${currentSet < 4 ? 'Next Set' : 'Next Lift'}</button>
             <div id="progress-bar-container">
-                <div id="progress-bar" style="width: ${(currentSet / 5) * 100}%"></div>
+                <div id="progress-bar" style="width: ${((currentSet + 1) / 5) * 100}%"></div>
             </div>
         </div>
     `;
